@@ -28,8 +28,8 @@ it('favorite_Box', () => {
 })
 
 it('slider_box', () => {
-  cy.get('.slider__picture').eq(0).should('have.attr','src','image/SandMuseum1.JPG')
-  cy.get('.slider__picture').eq(1).should('have.attr','src','image/SandMuseum2.JPG')
-  cy.get('.slider__picture').eq(2).should('have.attr','src','image/SandMuseum3.JPG')
-  cy.get('.slider__picture').eq(3).should('have.attr','src','image/SandMuseum4.JPG')
+  cy.get('[class="slider__picture"]').eq(0).should('have.attr','src','image/SandMuseum1.JPG')
+  cy.get('[class="slider__picture"]').eq(1).should('have.attr','src','image/SandMuseum2.JPG')
+  cy.get('[class="slider__picture"]').eq(2).should('have.attr','src','image/SandMuseum3.JPG')
+  cy.get('[class="slider__picture"]').eq(3).should('have.attr','src','image/SandMuseum4.JPG')
 })
