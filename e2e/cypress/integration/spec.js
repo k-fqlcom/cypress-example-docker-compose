@@ -3,9 +3,9 @@ it('introduction_Box', () => {
   cy.get('h1').contains('山田太郎の自己紹介')
   cy.get('[class="self-introduction__picture"]').should('have.attr','src','image/kagata.jpg')
   cy.get('.self-introduction > .self-introduction__texts > p[name="name"]').contains('Name : 山田太郎')
-  cy.get('p').contains('Age : xx歳')
-  cy.get('p').contains('From : xx県')
-  cy.get('p').contains('TEL : XXX-XXX')
+  cy.get('.self-introduction > .self-introduction__texts > p[name="age"]').contains('Age : xx歳')
+  cy.get('.self-introduction > .self-introduction__texts > p[name="from"]').contains('From : xx県')
+  cy.get('.self-introduction > .self-introduction__texts > p[name="tel"]').contains('TEL : XXX-XXX')
 })
 
 it('hoby_Box', () => {
