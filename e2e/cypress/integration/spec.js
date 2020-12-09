@@ -10,14 +10,14 @@ it('introduction_Box', () => {
 
 it('hoby_Box', () => {
   cy.visit('/')
-  cy.get('h2').eq(0).contains('趣味:釣り')
-  cy.get('p').eq(4).contains('主にイカ釣りをしています！写真は2年くらい前のもの...')
+  cy.get('.hobby > .hobby__texts > h2').contains('趣味:釣り')
+  cy.get('.hobby > .hobby__texts > p').contains('主にイカ釣りをしています！写真は2年くらい前のもの...')
   cy.get('.hobby__picture').should('have.attr','src','image/ika.JPG')
 })
 
 it('favorite_Box', () => {
   cy.visit('/')
-  cy.get('h2').eq(1).contains('猫が好き！！')
+  cy.get('.favorite > h2').contains('猫が好き！！')
   cy.get('p').eq(5).contains('画像はそれぞれ実際に撮影したものです！')
   cy.get('p').eq(6).contains('画像をクリックすると地図にジャンプ')
   cy.get('.favorite-link__text').eq(0).contains('xxxx')
